@@ -36,5 +36,5 @@ def dunne_pm(N=256):
     cmap.set_under([0.1, 0.0, 0.1])
     cmap.set_over([0.2, 0.0, 0.0])
     # cmap.set_bad('w')
-    matplotlib.cm.register_cmap(cmap=cmap)
+    matplotlib.colormaps.register(cmap=cmap)
     return cmap

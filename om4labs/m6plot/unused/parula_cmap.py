@@ -72,5 +72,5 @@ def parula_cmap():
 
     cmap = matplotlib.colors.LinearSegmentedColormap.from_list("parula", parula_values)
     cmap.set_bad("w")
-    matplotlib.cm.register_cmap(cmap=cmap)
+    matplotlib.colormaps.register(cmap=cmap)
     return cmap

@@ -32,5 +32,5 @@ def brownblue_cmap():
         "brownblue", lb_brownblue_values
     )
     cmap.set_bad("w")
-    matplotlib.cm.register_cmap(cmap=cmap)
+    matplotlib.colormaps.register(cmap=cmap)
     return cmap

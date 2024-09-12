@@ -39,5 +39,5 @@ def dunne_rainbow(N=256):
     cmap.set_under([0.95 * 0.9, 0.75 * 0.9, 0.9])
     cmap.set_over([0.3, 0.0, 0.0])
     # cmap.set_bad('w')
-    matplotlib.cm.register_cmap(cmap=cmap)
+    matplotlib.colormaps.register(cmap=cmap)
     return cmap
