@@ -1,6 +1,6 @@
 import intake
 import argparse
-import pkg_resources as pkgr
+from importlib.resources import files
 
 
 def parse(cliargs=None):
@@ -22,9 +22,9 @@ def parse(cliargs=None):
 
 def run(dictArgs):
     cat_platform = "catalogs/obs_catalog_" + dictArgs["platform"] + ".yml"
-    if pkgr.resource_exists("om4labs", cat_platform):
-        catfile = pkgr.resource_filename("om4labs", cat_platform)
-        cat = intake.open_catalog(catfile)
+    mysource = files("om4labs").joinpath(cat_platform)
+    if mysource.is_file():
+        cat = intake.open_catalog(mysource)
         return cat
     else:
         print("Platform not available")

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import argparse
-import pkg_resources as pkgr
+from importlib.resources import files
 import io
 import matplotlib as mpl
 import matplotlib.pyplot as plt

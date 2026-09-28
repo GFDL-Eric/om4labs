@@ -1,8 +1,8 @@
 import intake
-import pkg_resources
+from importlib.resources import files
 
 
 def test_catalogs_are_present():
-    f = pkg_resources.resource_filename("om4labs", "catalogs/obs_catalog_gfdl.yml")
+    f = files("om4labs").joinpath("catalogs/obs_catalog_gfdl.yml")
     cat = intake.open_catalog(f)
     assert isinstance(cat, intake.catalog.local.YAMLFileCatalog)

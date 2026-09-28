@@ -16,7 +16,7 @@ import cartopy.feature
 import intake
 import matplotlib as mpl
 import matplotlib.pyplot as plt
-import pkg_resources as pkgr
+from importlib.resources import files
 from matplotlib.lines import Line2D
 
 from om4labs.om4common import (

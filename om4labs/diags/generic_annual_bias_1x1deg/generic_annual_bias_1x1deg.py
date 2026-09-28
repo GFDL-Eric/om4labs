@@ -5,7 +5,7 @@ import numpy as np
 import argparse
 import xarray as xr
 import warnings
-import pkg_resources as pkgr
+from importlib.resources import files
 
 from om4labs import m6plot
 from om4labs.helpers import get_run_name, try_variable_from_list

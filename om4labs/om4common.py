@@ -16,7 +16,7 @@ import intake
 import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
-import pkg_resources as pkgr
+from importlib.resources import files
 import scipy
 import xarray as xr
 import xesmf as xe
@@ -712,7 +712,7 @@ def open_intake_catalog(platform, config):
     if "OM4LABS_CATALOG_DIR" in os.environ.keys():
         catfile = f"{os.environ['OM4LABS_CATALOG_DIR']}/{catalog_str}"
     else:
-        catfile = pkgr.resource_filename("om4labs", f"catalogs/{catalog_str}")
+        catfile = files("om4labs").joinpath(f"catalogs/{catalog_str}")
 
     cat = intake.open_catalog(catfile)
 

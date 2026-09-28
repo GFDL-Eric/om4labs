@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import pkg_resources as pkgr
+from importlib.resources import files
 import intake
 import io
 import matplotlib as mpl
