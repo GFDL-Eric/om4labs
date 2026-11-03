@@ -101,5 +101,7 @@ sources:
     driver: netcdf
     args:
       urlpath: '/archive/ogrp/jpk/datasets/om4labs/datasets/NOAA-ERSST/wavelet.NOAA-ERSST-v5.1880-2019.nc'
+      xarray_kwargs:
+        engine: "h5netcdf"
     metadata:
       origin_url: ''
